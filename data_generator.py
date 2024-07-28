@@ -36,36 +36,36 @@ def generate_bus_synthetic_data(number_of_samples: int, dataframe_column_name: l
 
 
 
-bus_870_synthetic_data: pd.DataFrame = generate_bus_synthetic_data( 1000, 
+bus_870_synthetic_data: pd.DataFrame = generate_bus_synthetic_data( 164, 
                                                                     ["trip_durations", "num_passengers", "distances"],
                                                                     {
                                                                         "mean": 50,
-                                                                        "standard_deviation": 10
+                                                                        "standard_deviation": 1.5
                                                                     },
                                                                     {
                                                                         "mean": 50,
-                                                                        "standard_deviation": 5
+                                                                        "standard_deviation": 15
                                                                     },
                                                                     {
                                                                         "mean": 6.2,
-                                                                        "standard_deviation": 2.7
+                                                                        "standard_deviation": 0.01
                                                                     }
                                                                    )
 
 
-bus_992_synthetic_data: pd.DataFrame = generate_bus_synthetic_data( 1000, 
+bus_992_synthetic_data: pd.DataFrame = generate_bus_synthetic_data( 70, 
                                                                     ["trip_durations", "num_passengers", "distances"],
+                                                                    {
+                                                                        "mean": 40,
+                                                                        "standard_deviation": 1.5
+                                                                    },
                                                                     {
                                                                         "mean": 40,
                                                                         "standard_deviation": 10
                                                                     },
                                                                     {
-                                                                        "mean": 20,
-                                                                        "standard_deviation": 5
-                                                                    },
-                                                                    {
                                                                         "mean": 6,
-                                                                        "standard_deviation": 2.4
+                                                                        "standard_deviation": 0.01
                                                                     }
                                                                    )
 
