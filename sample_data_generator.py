@@ -40,8 +40,9 @@ def systematic_sampling(dataframe: pandas.DataFrame, every_nth_member: int) -> p
     return systematic_sampling
 
 
-def simple_random_sampling(dataframe: pandas.DataFrame, sample_size: int) -> pandas.DataFrame:
-    randomized_index_list: list = numpy.random.choice(dataframe.index, size=sample_size, replace=False)
+def simple_random_sampling(dataframe: pandas.DataFrame, sample_size: int, seed_number: int) -> pandas.DataFrame:
+    rng = numpy.random.default_rng(seed=seed_number)
+    randomized_index_list: list = rng.choice(dataframe.index, size=sample_size, replace=False)
     simple_random_sampling_dataframe = dataframe.iloc[randomized_index_list]
 
     return simple_random_sampling_dataframe
